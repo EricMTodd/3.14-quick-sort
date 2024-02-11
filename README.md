@@ -6,3 +6,7 @@ This week we continue our study of different sorts, focusing on the recursive on
 You will need to fill in the functions partition and quickSort in main.cpp
 
 IMPORTANT NOTE: For this assignment the testbench is not a comprehensive analysis of your submission. The testbench checks that you have correctly sorted the items in the SortTester object. I have also written a test for your partition function that will check the following in regards to the return value index. All values located at or below the index are less than or equal to the value that was located at the midpoint at point of call. That all values at a location higher than the index are greater than or equal to the value that was located at the midpoint at point of call. I will be checking your algorithms to see that you have a recursive function (one that calls itself repeatedly to get to a base case), that you are using a quicksort algorithm. If you do not have those elements, you will not receive full credit for this lab. The assignment is worth 25 points.
+
+
+Compile for terminal: g++ main.cpp SortTester.cpp -o sort_test
+Run in terminal: ./sort_test
