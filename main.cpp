@@ -10,6 +10,10 @@ using namespace std;
 typedef unsigned int uint;
 
 uint partition(SortTester &tester, uint start, uint end) {
+    if (start >= end) {
+        return start;
+    }
+
     int pivot = end;
     int i = start - 1;
 
@@ -21,18 +25,16 @@ uint partition(SortTester &tester, uint start, uint end) {
     }
     i++;
     tester.swap(i, end);
-
-    tester.print();
     return i;
 }
 
 void quickSort(SortTester &tester, uint start, uint end) {
-    if (end <= start) {
+    if (start >= end || end > 19) {
         return;
     }
 
     uint pivot = partition(tester, start, end);
-    quickSort(tester, start, pivot - 1);
+    quickSort(tester, start, pivot > 0 ? pivot - 1 : pivot);
     quickSort(tester, pivot + 1, end);
 }
 
